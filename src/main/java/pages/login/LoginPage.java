@@ -7,4 +7,11 @@ public class LoginPage extends BasePage {
     public LoginPage(WebDriver driver) {
         super(driver);
     }
+
+    public void getLogin() {
+        type(locator, "mail");
+        clickElement(girişyapbutton);
+        type(locator, "şifre");
+        clickElement(girişyapbutton);
+    }
 }
