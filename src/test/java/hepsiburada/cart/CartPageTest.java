@@ -3,15 +3,25 @@ package hepsiburada.cart;
 
 import hepsiburada.BaseTest;
 import org.testng.Assert;
+import pages.cart.CartPage;
 import pages.home.HomePage;
 import pages.login.LoginPage;
 import org.testng.annotations.Test;
+import pages.product.ProductPage;
+import pages.search.ProductsPage;
 
 
 public class CartPageTest extends BaseTest {
 
     HomePage homePage;
     LoginPage loginPage;
+    ProductsPage productsPage;
+    ProductPage productPage;
+    CartPage cartPage;
+
+
+    final String expectedProfileName = "Hesabım";
+    final String expectedProductName = "ürün adı";
 
 
 
@@ -21,17 +31,24 @@ public class CartPageTest extends BaseTest {
 
         homePage = new HomePage(driver);
         loginPage = new LoginPage(driver);
+        productsPage = new ProductsPage(driver);
+        productPage = new ProductPage(driver);
+        cartPage = new CartPage(driver);
 
+        homePage.acceptCookies();
         homePage.goToLoginPage();
         loginPage.getLogin();
-        homePage.acceptCookies();
-        Assert.assertEquals("Hesabım",
+        Assert.assertEquals(expectedProfileName,
                 "Hesabım");
 
 
         homePage.searchBox().search();
-
-
+        productsPage.selectFirstProduct();
+        productsPage.switchNextWindow();
+        productPage.productAddToCart();
+        productPage.goToCartPage();
+        Assert.assertTrue(expectedProductName.equals(cartPage.getFirstProductName()) ||
+                expectedProductName.equals(cartPage.getSecondProductName()));
 
     }
 

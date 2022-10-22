@@ -9,4 +9,16 @@ public class ProductPage extends BasePage {
     }
 
 
+    public void productAddToCart() {
+        // for ile yapabilir miyiz ?
+        clickElement(1.sepeteekle);
+        clickElement(popuplocator);
+        clickElement(2.sepeteekle);
+        clickElement(popuplocator);
+    }
+
+    public void goToCartPage() {
+        clickElement(sepetimlocator);
+    }
+
 }
