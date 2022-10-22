@@ -1,5 +1,6 @@
 package pages.product;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import pages.BasePage;
 
@@ -8,17 +9,21 @@ public class ProductPage extends BasePage {
         super(driver);
     }
 
+    By addToCartFirstProduct;
+    By addToCartSecondProduct;
+    By closePopUpLocator;
+    By myCartLocator;
 
     public void productAddToCart() {
         // for ile yapabilir miyiz ?
-        clickElement(1.sepeteekle);
-        clickElement(popuplocator);
-        clickElement(2.sepeteekle);
-        clickElement(popuplocator);
+        clickElement(addToCartFirstProduct);
+        clickElement(closePopUpLocator);
+        clickElement(addToCartSecondProduct);
+        clickElement(closePopUpLocator);
     }
 
     public void goToCartPage() {
-        clickElement(sepetimlocator);
+        clickElement(myCartLocator);
     }
 
 }

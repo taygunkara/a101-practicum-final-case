@@ -1,5 +1,6 @@
 package pages.cart;
 
+import org.openqa.selenium.By;
 import pages.BasePage;
 import org.openqa.selenium.WebDriver;
 
@@ -9,12 +10,15 @@ public class CartPage extends BasePage {
         super(driver);
     }
 
+    By firstProductNameLocator;
+    By secondProductNameLocator;
+
 
     public String getFirstProductName() {
-        return getText(locator);
+        return getText(firstProductNameLocator);
     }
 
     public String getSecondProductName() {
-        return getText(locator);
+        return getText(secondProductNameLocator);
     }
 }

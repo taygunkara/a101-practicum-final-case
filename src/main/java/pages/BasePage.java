@@ -1,6 +1,5 @@
 package pages;
 
-import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -28,10 +27,6 @@ public class BasePage {
         findElement(locator).click();
     }
 
-    public String getTittleOfPage(){
-        return driver.getTitle();
-    }
-
     public void waitUntilItemShowsUp(By locator){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
@@ -47,28 +42,8 @@ public class BasePage {
         return findElement(locator).getText();
     }
 
-    public String setRandomEmail(){
-        Faker faker = new Faker();
-        return faker.internet().emailAddress();
-    }
-
-    public String setRandomName(){
-        Faker faker = new Faker();
-        return faker.name().firstName();
-    }
-
-    public String setRandomLastName(){
-        Faker faker = new Faker();
-        return faker.name().lastName();
-    }
-
     public void type(By locator, String text){
         findElement(locator).sendKeys(text);
     }
-
-    public String getPageUrl(){
-        return driver.getCurrentUrl();
-    }
-
 
 }

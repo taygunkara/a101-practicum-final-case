@@ -1,5 +1,6 @@
 package pages.login;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import pages.BasePage;
 
@@ -8,10 +9,33 @@ public class LoginPage extends BasePage {
         super(driver);
     }
 
-    public void getLogin() {
-        type(locator, "mail");
-        clickElement(girişyapbutton);
-        type(locator, "şifre");
-        clickElement(girişyapbutton);
+    By emailBoxLocator = By.xpath("//input[@id='txtUserName']");
+    // sign in button = emailConfirmButton
+    By emailConfirmButtonLocator = By.xpath("//button[@id='btnLogin']");
+    By passwordBoxLocator = By.xpath("//input[@id='txtPassword']");
+    // sign in button = passwordConfirmButton
+    By passwordConfirmButtonLocator = By.xpath("//button[@id='btnEmailSelect']");
+
+
+
+    // error when trying to login with password in automation -- create google account to login without password
+    final String email = "@gmail.com";
+    final String password = "";
+
+    public void setEmail(){
+        type(emailBoxLocator, email);
+        clickElement(emailConfirmButtonLocator);
     }
+
+    public void setPassword(){
+        type(passwordBoxLocator, password);
+        clickElement(passwordConfirmButtonLocator);
+    }
+
+    public void getLogin() {
+        setEmail();
+        setPassword();
+    }
+
+
 }

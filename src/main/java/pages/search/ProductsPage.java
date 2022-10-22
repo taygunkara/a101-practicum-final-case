@@ -1,5 +1,6 @@
 package pages.search;
 
+import org.openqa.selenium.By;
 import pages.BasePage;
 import org.openqa.selenium.WebDriver;
 
@@ -10,10 +11,12 @@ public class ProductsPage extends BasePage {
         super(driver);
     }
 
+    By firstProductLocator;
+
     ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
 
     public void selectFirstProduct() {
-        clickElement(urunlocator);
+        clickElement(firstProductLocator);
     }
     public void switchNextWindow(){
         driver.switchTo().window(newTab.get(1));

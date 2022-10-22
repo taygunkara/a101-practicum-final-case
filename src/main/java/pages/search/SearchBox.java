@@ -1,5 +1,6 @@
 package pages.search;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import pages.BasePage;
 
@@ -8,9 +9,13 @@ public class SearchBox extends BasePage {
         super(driver);
     }
 
+    By searchBoxLocator;
+    By searchButtonLocator;
+
+    private final String searchingProductName = "";
 
     public void search() {
-        type(locator, aranankelime);
-        clickElement(aramabutonu);
+        type(searchBoxLocator, searchingProductName);
+        clickElement(searchButtonLocator);
     }
 }
