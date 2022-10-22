@@ -9,10 +9,10 @@ public class SearchBox extends BasePage {
         super(driver);
     }
 
-    By searchBoxLocator;
-    By searchButtonLocator;
+    By searchBoxLocator = By.xpath("//input[@class='desktopOldAutosuggestTheme-UyU36RyhCTcuRs_sXL9b']");
+    By searchButtonLocator = By.cssSelector(".SearchBoxOld-cHxjyU99nxdIaAbGyX7F");
 
-    private final String searchingProductName = "";
+    private final String searchingProductName = "Cep Telefonu";
 
     public void search() {
         type(searchBoxLocator, searchingProductName);

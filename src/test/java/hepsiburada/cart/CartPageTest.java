@@ -35,7 +35,7 @@ public class CartPageTest extends BaseTest {
         productPage = new ProductPage(driver);
         cartPage = new CartPage(driver);
 
-       // homePage.acceptCookies();
+        // homePage.acceptCookies();
         homePage.goToLoginPage();
         loginPage.getLogin();
        // Assert.assertEquals(expectedProfileName);

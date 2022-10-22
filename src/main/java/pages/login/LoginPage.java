@@ -16,9 +16,6 @@ public class LoginPage extends BasePage {
     // sign in button = passwordConfirmButton
     By passwordConfirmButtonLocator = By.xpath("//button[@id='btnEmailSelect']");
 
-
-
-    // error when trying to login with password in automation -- create google account to login without password
     final String email = "@gmail.com";
     final String password = "";
 

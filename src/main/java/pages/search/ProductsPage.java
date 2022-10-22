@@ -11,7 +11,7 @@ public class ProductsPage extends BasePage {
         super(driver);
     }
 
-    By firstProductLocator;
+    By firstProductLocator = By.xpath("//*[@id='i0']");
 
     ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
 
