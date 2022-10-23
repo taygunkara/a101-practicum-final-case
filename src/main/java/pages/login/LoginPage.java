@@ -16,8 +16,8 @@ public class LoginPage extends BasePage {
     // sign in button = passwordConfirmButton
     By passwordConfirmButtonLocator = By.xpath("//button[@id='btnEmailSelect']");
 
-    final String email = "@gmail.com";
-    final String password = "";
+    final String email = "kara.taygun@gmail.com";
+    final String password = "yvwhBBMNe8";
 
     public void setEmail(){
         type(emailBoxLocator, email);

@@ -19,36 +19,38 @@ public class CartPageTest extends BaseTest {
     ProductPage productPage;
     CartPage cartPage;
 
+    final String expectedProductName = "TCL 30 Plus 128 GB 4 GB Ram (TCL Türkiye Garantili)";
 
-    final String expectedProfileName = "";
-    final String expectedProductName = "";
-
-
-
-    @Test(priority = 0, description = "Adding product to cart by logging in first." +
-            "then verifying the product by going to the cart.")
-    public void addProductToCartWithLogin(){
-
+    public void initDrivers(){
         homePage = new HomePage(driver);
         loginPage = new LoginPage(driver);
         productsPage = new ProductsPage(driver);
         productPage = new ProductPage(driver);
         cartPage = new CartPage(driver);
+    }
 
-        homePage.acceptCookies();
-        homePage.goToLoginPage();
-        loginPage.getLogin();
-        // Assert.assertEquals(expectedProfileName);
+    public void commonSteps(){
 
         homePage.searchBox().search();
         productsPage.selectFirstProduct();
         productPage.changeWindowTab();
         productPage.productAddToCart();
-
         productPage.goToCartPage();
+    }
 
-        // Assert.assertTrue(expectedProductName.equals(cartPage.getFirstProductName()) ||
-        //        expectedProductName.equals(cartPage.getSecondProductName()));
+    @Test(priority = 0, description = "Adding product to cart by logging in first." +
+            "then verifying the product by going to the cart.")
+    public void addProductToCartWithLogin(){
+
+        initDrivers();
+        homePage.acceptCookies();
+        homePage.goToLoginPage();
+        loginPage.getLogin();
+        Assert.assertTrue(homePage.isLoggedIn());
+
+        commonSteps();
+        Assert.assertTrue(expectedProductName.equals(cartPage.getFirstProductName()) ||
+               expectedProductName.equals(cartPage.getSecondProductName()));
 
     }
 
@@ -57,6 +59,12 @@ public class CartPageTest extends BaseTest {
             "then verifying the product by going to the cart.")
     public void addProductToCartWithoutLogin(){
 
+        initDrivers();
+        homePage.acceptCookies();
+        commonSteps();
+
+        Assert.assertTrue(expectedProductName.equals(cartPage.getFirstProductName()) ||
+                expectedProductName.equals(cartPage.getSecondProductName()));
 
     }
 
