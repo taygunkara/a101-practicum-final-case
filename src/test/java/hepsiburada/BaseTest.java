@@ -4,14 +4,13 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
 
 public class BaseTest {
     public WebDriver driver;
     private final String BASE_URL = "https://www.hepsiburada.com/";
 
-    @BeforeTest
+    @BeforeMethod
     public void setUp(){
 
         ChromeOptions options = new ChromeOptions();
@@ -30,8 +29,9 @@ public class BaseTest {
         // driver.manage().window().maximize();
     }
 
-/*    @AfterTest
+    @AfterMethod
     public void tearDown(){
+        driver.close();
         driver.quit();
-    }*/
+    }
 }

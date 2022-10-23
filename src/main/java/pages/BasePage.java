@@ -46,4 +46,8 @@ public class BasePage {
         findElement(locator).sendKeys(text);
     }
 
+    public Boolean isDisplayed(By locator){
+        return findElement(locator).isDisplayed();
+    }
+
 }

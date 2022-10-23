@@ -10,12 +10,8 @@ public class CartPage extends BasePage {
         super(driver);
     }
 
-    By firstProductNameLocator = By.xpath("//h1[@id='product-name']");
-    By secondProductNameLocator = By.xpath("//h1[@id='product-name']");
-
-    By firstMercantNameLocator;
-    By secondMercantLocator;
-
+    By firstProductNameLocator = By.xpath("/html/body/div[1]/div/div/div[2]/div/div[2]/section/section/div[3]/div/ul/li/div/div/div[1]/div[2]/div[2]/a");
+    By secondProductNameLocator = By.xpath("/html/body/div[1]/div/div/div[2]/div/div[2]/section/section/div[4]/div/ul/li/div/div/div[1]/div[2]/div[2]/a");
 
     public String getFirstProductName() {
         return getText(firstProductNameLocator);

@@ -18,6 +18,7 @@ public class HomePage extends BasePage {
     By signInHoverLocator = By.xpath("//span[@data-test-id='account']");
     By signInButtonLocator = By.xpath("//a[@id='login']");
     By acceptCookiesButtonLocator = By.xpath("//button[@id='onetrust-accept-btn-handler']");
+    By myAccountLocator = By.xpath("//a[@title='Hesabım']");
 
     public void goToLoginPage() {
         mouseMovement(signInHoverLocator);
@@ -28,5 +29,7 @@ public class HomePage extends BasePage {
         clickElement(acceptCookiesButtonLocator);
     }
 
-
+    public boolean isLoggedIn() {
+        return isDisplayed(myAccountLocator);
+    }
 }
