@@ -18,7 +18,4 @@ public class ProductsPage extends BasePage {
     public void selectFirstProduct() {
         clickElement(firstProductLocator);
     }
-    public void switchNextWindow(){
-        driver.switchTo().window(newTab.get(1));
-    }
 }

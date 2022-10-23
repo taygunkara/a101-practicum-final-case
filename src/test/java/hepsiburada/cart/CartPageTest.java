@@ -35,7 +35,7 @@ public class CartPageTest extends BaseTest {
         productPage = new ProductPage(driver);
         cartPage = new CartPage(driver);
 
-        // homePage.acceptCookies();
+        homePage.acceptCookies();
         homePage.goToLoginPage();
         loginPage.getLogin();
        // Assert.assertEquals(expectedProfileName);
@@ -43,9 +43,9 @@ public class CartPageTest extends BaseTest {
 
         homePage.searchBox().search();
         productsPage.selectFirstProduct();
-        productsPage.switchNextWindow();
         productPage.productAddToCart();
-        productPage.goToCartPage();
+        System.out.println(cartPage.getFirstProductName() + " " + cartPage.getSecondProductName());
+        //productPage.goToCartPage();
 
        // Assert.assertTrue(expectedProductName.equals(cartPage.getFirstProductName()) ||
        //         expectedProductName.equals(cartPage.getSecondProductName()));
