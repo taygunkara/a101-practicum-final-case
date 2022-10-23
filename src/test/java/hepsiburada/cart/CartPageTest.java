@@ -38,17 +38,17 @@ public class CartPageTest extends BaseTest {
         homePage.acceptCookies();
         homePage.goToLoginPage();
         loginPage.getLogin();
-       // Assert.assertEquals(expectedProfileName);
-
+        // Assert.assertEquals(expectedProfileName);
 
         homePage.searchBox().search();
         productsPage.selectFirstProduct();
+        productPage.changeWindowTab();
         productPage.productAddToCart();
-        System.out.println(cartPage.getFirstProductName() + " " + cartPage.getSecondProductName());
-        //productPage.goToCartPage();
 
-       // Assert.assertTrue(expectedProductName.equals(cartPage.getFirstProductName()) ||
-       //         expectedProductName.equals(cartPage.getSecondProductName()));
+        productPage.goToCartPage();
+
+        // Assert.assertTrue(expectedProductName.equals(cartPage.getFirstProductName()) ||
+        //        expectedProductName.equals(cartPage.getSecondProductName()));
 
     }
 
@@ -56,6 +56,7 @@ public class CartPageTest extends BaseTest {
     @Test(priority = 1, description = "Adding a product to the cart without logging in, " +
             "then verifying the product by going to the cart.")
     public void addProductToCartWithoutLogin(){
+
 
     }
 
