@@ -19,7 +19,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.5.0</version>
+            <version>4.5.3</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-support -->
         <dependency>
@@ -31,7 +31,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-chrome-driver</artifactId>
-            <version>4.5.0</version>
+            <version>4.5.3</version>
         </dependency>
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
@@ -44,6 +44,12 @@
             <artifactId>testng</artifactId>
             <version>7.6.1</version>
             <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.surefire/surefire-report-parser -->
+        <dependency>
+            <groupId>org.apache.maven.surefire</groupId>
+            <artifactId>surefire-report-parser</artifactId>
+            <version>3.0.0-M7</version>
         </dependency>
     </dependencies>
 </project>

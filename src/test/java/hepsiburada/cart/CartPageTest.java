@@ -30,7 +30,6 @@ public class CartPageTest extends BaseTest {
     }
 
     public void commonSteps(){
-
         homePage.searchBox().search();
         productsPage.selectFirstProduct();
         productPage.changeWindowTab();
@@ -49,6 +48,7 @@ public class CartPageTest extends BaseTest {
         Assert.assertTrue(homePage.isLoggedIn());
 
         commonSteps();
+
         Assert.assertTrue(expectedProductName.equals(cartPage.getFirstProductName()) ||
                expectedProductName.equals(cartPage.getSecondProductName()));
 
@@ -67,6 +67,5 @@ public class CartPageTest extends BaseTest {
                 expectedProductName.equals(cartPage.getSecondProductName()));
 
     }
-
 
 }
