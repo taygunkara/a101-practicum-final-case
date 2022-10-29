@@ -3,6 +3,7 @@ package hepsiburada.cart;
 
 import hepsiburada.BaseTest;
 import org.testng.Assert;
+import org.testng.Reporter;
 import pages.cart.CartPage;
 import pages.home.HomePage;
 import pages.login.LoginPage;
@@ -37,7 +38,7 @@ public class CartPageTest extends BaseTest {
         productPage.goToCartPage();
     }
 
-    @Test(priority = 0, description = "Adding product to cart by logging in first." +
+    @Test(priority = 1, description = "Adding product to cart by logging in first." +
             "then verifying the product by going to the cart.")
     public void addProductToCartWithLogin(){
 
@@ -45,26 +46,34 @@ public class CartPageTest extends BaseTest {
         homePage.acceptCookies();
         homePage.goToLoginPage();
         loginPage.getLogin();
-        Assert.assertTrue(homePage.isLoggedIn());
+        Assert.assertTrue(homePage.isLoggedIn(),
+                "Login failed.");
+        Reporter.log("Login successful.");
+
 
         commonSteps();
 
         Assert.assertTrue(expectedProductName.equals(cartPage.getFirstProductName()) ||
-               expectedProductName.equals(cartPage.getSecondProductName()));
+               expectedProductName.equals(cartPage.getSecondProductName()),
+                "The products do not match.");
+        Reporter.log("The products match.");
 
     }
 
 
-    @Test(priority = 1, description = "Adding a product to the cart without logging in, " +
+    @Test(priority = 2, description = "Adding a product to the cart without logging in, " +
             "then verifying the product by going to the cart.")
     public void addProductToCartWithoutLogin(){
 
         initDrivers();
         homePage.acceptCookies();
+
         commonSteps();
 
         Assert.assertTrue(expectedProductName.equals(cartPage.getFirstProductName()) ||
-                expectedProductName.equals(cartPage.getSecondProductName()));
+                expectedProductName.equals(cartPage.getSecondProductName()),
+                "The products do not match.");
+        Reporter.log("The products match.");
 
     }
 

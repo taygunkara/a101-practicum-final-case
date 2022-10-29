@@ -4,6 +4,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.Reporter;
 import org.testng.annotations.*;
 
 public class BaseTest {
@@ -27,11 +28,13 @@ public class BaseTest {
         driver = new ChromeDriver(options);
         driver.get(BASE_URL);
         // driver.manage().window().maximize();
+        Reporter.log("The browser opened successfully.");
     }
 
     @AfterMethod
     public void tearDown(){
         driver.close();
         driver.quit();
+        Reporter.log("The browser was successfully closed.");
     }
 }

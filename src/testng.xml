@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Hepsiburada"  parallel="false" preserve-order="true" verbose="2">
+<suite name="Hepsiburada" verbose="1">
     <test name="Hepsiburada CartPage Test">
         <classes>
             <class name="hepsiburada.cart.CartPageTest"></class>
