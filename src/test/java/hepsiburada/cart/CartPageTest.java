@@ -22,6 +22,9 @@ public class CartPageTest extends BaseTest {
 
     final String expectedProductName = "TCL 30 Plus 128 GB 4 GB Ram (TCL Türkiye Garantili)";
 
+    /**
+     * Initialize the drivers.
+     */
     public void initDrivers(){
         homePage = new HomePage(driver);
         loginPage = new LoginPage(driver);
@@ -30,7 +33,15 @@ public class CartPageTest extends BaseTest {
         cartPage = new CartPage(driver);
     }
 
-    public void commonSteps(){
+    /**
+     * Function made for common steps.
+     * 1- Search desired product name.
+     * 2- Select first product from results.
+     * 3- Transferring the driver to the new tab.
+     * 4- Add products to cart from two different mercents.
+     * 5- Go to cart page from product page.
+     */
+    public void searchAndAddProductToCart(){
         homePage.searchBox().search();
         productsPage.selectFirstProduct();
         productPage.changeWindowTab();
@@ -51,12 +62,12 @@ public class CartPageTest extends BaseTest {
         Reporter.log("Login successful.");
 
 
-        commonSteps();
+        searchAndAddProductToCart();
 
         Assert.assertTrue(expectedProductName.equals(cartPage.getFirstProductName()) ||
                expectedProductName.equals(cartPage.getSecondProductName()),
-                "The products do not match.");
-        Reporter.log("The products match.");
+                "The product names do not match.");
+        Reporter.log("The product names match.");
 
     }
 
@@ -68,12 +79,12 @@ public class CartPageTest extends BaseTest {
         initDrivers();
         homePage.acceptCookies();
 
-        commonSteps();
+        searchAndAddProductToCart();
 
         Assert.assertTrue(expectedProductName.equals(cartPage.getFirstProductName()) ||
-                expectedProductName.equals(cartPage.getSecondProductName()),
-                "The products do not match.");
-        Reporter.log("The products match.");
+                        expectedProductName.equals(cartPage.getSecondProductName()),
+                "The product names do not match.");
+        Reporter.log("The product names match.");
 
     }
 

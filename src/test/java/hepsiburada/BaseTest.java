@@ -15,13 +15,13 @@ public class BaseTest {
     public void setUp(){
 
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--incognito");
-        options.addArguments("--start-maximized");
-        options.addArguments("--ignore-certificate-errors");
-        options.addArguments("--allow-insecure-localhost");
-        options.addArguments("--acceptInsecureCerts");
-        options.addArguments("--disable-blink-features=AutomationControlled");
-        options.addArguments("--disable-extensions");
+        options.addArguments("--incognito").
+                addArguments("--start-maximized").
+                addArguments("--ignore-certificate-errors").
+                addArguments("--allow-insecure-localhost").
+                addArguments("--acceptInsecureCerts").
+                addArguments("--disable-blink-features=AutomationControlled").
+                addArguments("--disable-extensions");
 
 
         WebDriverManager.chromedriver().setup();
@@ -34,7 +34,7 @@ public class BaseTest {
     @AfterMethod
     public void tearDown(){
         driver.close();
-        driver.quit();
+        // driver.quit();
         Reporter.log("The browser was successfully closed.");
     }
 }

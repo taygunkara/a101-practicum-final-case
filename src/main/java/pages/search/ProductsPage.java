@@ -6,6 +6,9 @@ import org.openqa.selenium.WebDriver;
 
 import java.util.ArrayList;
 
+/**
+ * Represents the products page (searched - result page).
+ */
 public class ProductsPage extends BasePage {
     public ProductsPage(WebDriver driver) {
         super(driver);
@@ -15,6 +18,9 @@ public class ProductsPage extends BasePage {
 
     ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
 
+    /**
+     * Go inside the first product in the results.
+     */
     public void selectFirstProduct() {
         clickElement(firstProductLocator);
     }
