@@ -37,4 +37,5 @@ public class BaseTest {
         driver.quit();
         Reporter.log("The browser was successfully closed.");
     }
+
 }

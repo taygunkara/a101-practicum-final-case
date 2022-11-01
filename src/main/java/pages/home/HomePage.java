@@ -44,4 +44,5 @@ public class HomePage extends BasePage {
     public boolean isLoggedIn() {
         return isDisplayed(myAccountLocator);
     }
+
 }

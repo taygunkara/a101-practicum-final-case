@@ -24,4 +24,5 @@ public class SearchBox extends BasePage {
         type(searchBoxLocator, searchingProductName);
         clickElement(searchButtonLocator);
     }
+
 }

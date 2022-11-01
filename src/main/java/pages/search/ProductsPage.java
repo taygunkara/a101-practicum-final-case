@@ -20,4 +20,5 @@ public class ProductsPage extends BasePage {
     public void selectFirstProduct() {
         clickElement(firstProductLocator);
     }
+
 }
