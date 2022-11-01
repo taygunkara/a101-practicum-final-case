@@ -14,11 +14,11 @@ import pages.search.ProductsPage;
 
 public class CartPageTest extends BaseTest {
 
-    HomePage homePage;
-    LoginPage loginPage;
-    ProductsPage productsPage;
-    ProductPage productPage;
-    CartPage cartPage;
+    private HomePage homePage;
+    private LoginPage loginPage;
+    private ProductsPage productsPage;
+    private ProductPage productPage;
+    private CartPage cartPage;
 
     final String expectedProductName = "TCL 30 Plus 128 GB 4 GB Ram (TCL Türkiye Garantili)";
 
