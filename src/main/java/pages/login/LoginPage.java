@@ -12,12 +12,10 @@ public class LoginPage extends BasePage {
         super(driver);
     }
 
-    By emailBoxLocator = By.xpath("//input[@id='txtUserName']");
-    // sign in button = emailConfirmButton
-    By emailConfirmButtonLocator = By.xpath("//button[@id='btnLogin']");
-    By passwordBoxLocator = By.xpath("//input[@id='txtPassword']");
-    // sign in button = passwordConfirmButton
-    By passwordConfirmButtonLocator = By.xpath("//button[@id='btnEmailSelect']");
+    private final By emailBoxLocator = By.xpath("//input[@id='txtUserName']");
+    private final By emailConfirmButtonLocator = By.xpath("//button[@id='btnLogin']");
+    private final By passwordBoxLocator = By.xpath("//input[@id='txtPassword']");
+    private final By passwordConfirmButtonLocator = By.xpath("//button[@id='btnEmailSelect']");
 
     final String email = "tk_testing_mail@proton.me";
     final String password = "Testingpassword1";

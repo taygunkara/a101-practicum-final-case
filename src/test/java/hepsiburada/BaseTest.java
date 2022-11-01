@@ -34,7 +34,7 @@ public class BaseTest {
     @AfterMethod
     public void tearDown(){
         driver.close();
-        // driver.quit();
+        driver.quit();
         Reporter.log("The browser was successfully closed.");
     }
 }

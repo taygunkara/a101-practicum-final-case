@@ -18,10 +18,10 @@ public class HomePage extends BasePage {
         return this.searchBox;
     }
 
-    By signInHoverLocator = By.xpath("//span[@data-test-id='account']");
-    By signInButtonLocator = By.xpath("//a[@id='login']");
-    By acceptCookiesButtonLocator = By.xpath("//button[@id='onetrust-accept-btn-handler']");
-    By myAccountLocator = By.xpath("//a[@title='Hesabım']");
+    private final By signInHoverLocator = By.xpath("//span[@data-test-id='account']");
+    private final By signInButtonLocator = By.xpath("//a[@id='login']");
+    private final By acceptCookiesButtonLocator = By.xpath("//button[@id='onetrust-accept-btn-handler']");
+    private final By myAccountLocator = By.xpath("//a[@title='Hesabım']");
 
     /**
      * Go to the login page from the home page.

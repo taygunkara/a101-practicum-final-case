@@ -12,9 +12,9 @@ public class ProductPage extends BasePage {
         super(driver);
     }
 
-    By addToCartFromFirstMercant = By.xpath("//button[@id='addToCart']");
-    By addToCartFromSecondMercant = By.xpath("/html/body/div[2]/main/div[3]/section[1]/div[3]/div/div[4]/div[2]/div[3]/div/div[2]/table/tbody/tr[1]/td[3]/div/form/button");
-    By myCartLocator = By.cssSelector("a.sf-OldMyAccount-MjrNQp_LLdAaN1g0xvSz");
+    private final By addToCartFromFirstMercant = By.xpath("//button[@id='addToCart']");
+    private final By addToCartFromSecondMercant = By.cssSelector(".marketplace-list > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(3) > div:nth-child(1) > form:nth-child(1) > button:nth-child(15)");
+    private final By myCartLocator = By.cssSelector("a.sf-OldMyAccount-MjrNQp_LLdAaN1g0xvSz");
 
     /**
      * Transferring the driver to the new tab after the new tab is opened.

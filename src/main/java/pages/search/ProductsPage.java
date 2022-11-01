@@ -4,8 +4,6 @@ import org.openqa.selenium.By;
 import pages.BasePage;
 import org.openqa.selenium.WebDriver;
 
-import java.util.ArrayList;
-
 /**
  * Represents the products page (searched - result page).
  */
@@ -14,9 +12,7 @@ public class ProductsPage extends BasePage {
         super(driver);
     }
 
-    By firstProductLocator = By.xpath("//*[@id='i0']");
-
-    ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
+    private final By firstProductLocator = By.xpath("//*[@id='i0']");
 
     /**
      * Go inside the first product in the results.
