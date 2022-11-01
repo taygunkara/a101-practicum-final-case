@@ -69,6 +69,8 @@ public class CartPageTest extends BaseTest {
                 "The product names do not match.");
         Reporter.log("The product names match.");
 
+        cartPage.removeProducts();
+
     }
 
 

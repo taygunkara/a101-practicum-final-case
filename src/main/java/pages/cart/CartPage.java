@@ -13,10 +13,10 @@ public class CartPage extends BasePage {
         super(driver);
     }
 
-    By firstProductNameLocator = By.xpath("/html/body/div[1]/div/div/div[2]/div/div[2]/section/section/div[3]/div/ul/li/div/div/div[1]/div[2]/div[2]/a");
-    By secondProductNameLocator = By.xpath("/html/body/div[1]/div/div/div[2]/div/div[2]/section/section/div[4]/div/ul/li/div/div/div[1]/div[2]/div[2]/a");
-    By firstProductCleanButtonLocator = By.xpath("/html/body/div[1]/div/div/div[2]/div/div[2]/section/section/div[3]/div/ul/li/div/div/div[1]/div[2]/div[4]/div[2]/div/a[2]");
-    By secondProductCleanButtonLocator = By.xpath("/html/body/div[1]/div/div/div[2]/div/div[2]/section/section/div[4]/div/ul/li/div/div/div[1]/div[2]/div[4]/div[2]/div/a[2]");
+    private final By firstProductNameLocator = By.xpath("/html/body/div[1]/div/div/div[2]/div/div[2]/section/section/div[3]/div/ul/li/div/div/div[1]/div[2]/div[2]/a");
+    private final By secondProductNameLocator = By.xpath("/html/body/div[1]/div/div/div[2]/div/div[2]/section/section/div[4]/div/ul/li/div/div/div[1]/div[2]/div[2]/a");
+    private final By firstProductCleanButtonLocator = By.xpath("/html/body/div[1]/div/div/div[2]/div/div[2]/section/section/div[3]/div/ul/li/div/div/div[1]/div[2]/div[4]/div[2]/div/a[2]");
+    private final By secondProductCleanButtonLocator = By.xpath("/html/body/div[1]/div/div/div[2]/div/div[2]/section/section/div[4]/div/ul/li/div/div/div[1]/div[2]/div[4]/div[2]/div/a[2]");
 
     /**
      * Get first product name.
@@ -36,7 +36,7 @@ public class CartPage extends BasePage {
      * Clean to cart.
      */
     public void removeProducts() {
-        clickElement(firstProductCleanButtonLocator);
         clickElement(secondProductCleanButtonLocator);
+        clickElement(firstProductCleanButtonLocator);
     }
 }
