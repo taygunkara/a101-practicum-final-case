@@ -43,10 +43,15 @@ public class CartPageTest extends BaseTest {
      */
     public void searchAndAddProductToCart(){
         homePage.searchBox().search();
+        Reporter.log("The product has been searched.");
         productsPage.selectFirstProduct();
+        Reporter.log("The first product is selected.");
         productPage.changeWindowTab();
+        Reporter.log("Window tab has been changed.");
         productPage.productAddToCart();
+        Reporter.log("Products have been added to the cart.");
         productPage.goToCartPage();
+        Reporter.log("Go to cart.");
     }
 
     @Test(priority = 1, description = "Adding product to cart by logging in first." +
@@ -55,8 +60,11 @@ public class CartPageTest extends BaseTest {
 
         initDrivers();
         homePage.acceptCookies();
+        Reporter.log("Cookies accepted.");
         homePage.goToLoginPage();
+        Reporter.log("Go to the login page.");
         loginPage.getLogin();
+        Reporter.log("Login information has been entered.");
         Assert.assertTrue(homePage.isLoggedIn(),
                 "Login failed.");
         Reporter.log("Login successful.");
@@ -70,6 +78,7 @@ public class CartPageTest extends BaseTest {
         Reporter.log("The product names match.");
 
         cartPage.removeProducts();
+        Reporter.log("The cart has been cleaned.");
 
     }
 
@@ -80,6 +89,7 @@ public class CartPageTest extends BaseTest {
 
         initDrivers();
         homePage.acceptCookies();
+        Reporter.log("Cookies accepted.");
 
         searchAndAddProductToCart();
 
