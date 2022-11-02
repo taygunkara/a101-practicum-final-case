@@ -1,0 +1,120 @@
+<html>
+<head>
+<title>TestNG:  Hepsiburada CartPage Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Hepsiburada CartPage Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Nov 02 12:08:00 TRT 2022</td>
+</tr>
+<tr><td>Total time:</td><td>66 seconds (66940 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='hepsiburada.cart.CartPageTest.addProductToCartWithoutLogin()'><b>addProductToCartWithoutLogin</b><br>Test class: hepsiburada.cart.CartPageTest<br>Test method: Adding a product to the cart without logging in, then verifying the product by going to the cart.<br/>
+<a href="#Output-395607661" onClick='toggleBox("Output-395607661", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-395607661" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-395607661">
+Cookies accepted.<br/>
+The product has been searched.<br/>
+The first product is selected.<br/>
+Window tab has been changed.<br/>
+Products have been added to the cart.<br/>
+Go to cart.<br/>
+The product names match.<br/>
+</div>
+</td>
+<td></td>
+<td>19</td>
+<td>hepsiburada.cart.CartPageTest@1a38c59b</td></tr>
+<tr>
+<td title='hepsiburada.cart.CartPageTest.addProductToCartWithLogin()'><b>addProductToCartWithLogin</b><br>Test class: hepsiburada.cart.CartPageTest<br>Test method: Adding product to cart by logging in first.then verifying the product by going to the cart.<br/>
+<a href="#Output-1790229151" onClick='toggleBox("Output-1790229151", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1790229151" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1790229151">
+Cookies accepted.<br/>
+Go to the login page.<br/>
+Login information has been entered.<br/>
+Login successful.<br/>
+The product has been searched.<br/>
+The first product is selected.<br/>
+Window tab has been changed.<br/>
+Products have been added to the cart.<br/>
+Go to cart.<br/>
+The product names match.<br/>
+The cart has been cleaned.<br/>
+</div>
+</td>
+<td></td>
+<td>30</td>
+<td>hepsiburada.cart.CartPageTest@1a38c59b</td></tr>
+</table><p>
+</body>
+</html>

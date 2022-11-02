@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[The browser opened successfully.]]>
+    </line>
+    <line>
+      <![CDATA[Cookies accepted.]]>
+    </line>
+    <line>
+      <![CDATA[Go to the login page.]]>
+    </line>
+    <line>
+      <![CDATA[Login information has been entered.]]>
+    </line>
+    <line>
+      <![CDATA[Login successful.]]>
+    </line>
+    <line>
+      <![CDATA[The product has been searched.]]>
+    </line>
+    <line>
+      <![CDATA[The first product is selected.]]>
+    </line>
+    <line>
+      <![CDATA[Window tab has been changed.]]>
+    </line>
+    <line>
+      <![CDATA[Products have been added to the cart.]]>
+    </line>
+    <line>
+      <![CDATA[Go to cart.]]>
+    </line>
+    <line>
+      <![CDATA[The product names match.]]>
+    </line>
+    <line>
+      <![CDATA[The cart has been cleaned.]]>
+    </line>
+    <line>
+      <![CDATA[The browser was successfully closed.]]>
+    </line>
+    <line>
+      <![CDATA[The browser opened successfully.]]>
+    </line>
+    <line>
+      <![CDATA[Cookies accepted.]]>
+    </line>
+    <line>
+      <![CDATA[The product has been searched.]]>
+    </line>
+    <line>
+      <![CDATA[The first product is selected.]]>
+    </line>
+    <line>
+      <![CDATA[Window tab has been changed.]]>
+    </line>
+    <line>
+      <![CDATA[Products have been added to the cart.]]>
+    </line>
+    <line>
+      <![CDATA[Go to cart.]]>
+    </line>
+    <line>
+      <![CDATA[The product names match.]]>
+    </line>
+    <line>
+      <![CDATA[The browser was successfully closed.]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2022-11-02T12:09:25 TRT" name="Command line suite" finished-at="2022-11-02T12:10:35 TRT" duration-ms="70552">
+    <groups>
+    </groups>
+    <test started-at="2022-11-02T12:09:25 TRT" name="Command line test" finished-at="2022-11-02T12:10:35 TRT" duration-ms="70552">
+      <class name="hepsiburada.cart.CartPageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:hepsiburada.cart.CartPageTest@71248c21]" started-at="2022-11-02T12:09:25 TRT" name="setUp" finished-at="2022-11-02T12:09:34 TRT" duration-ms="9439" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[The browser opened successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="addProductToCartWithLogin()[pri:1, instance:hepsiburada.cart.CartPageTest@71248c21]" started-at="2022-11-02T12:09:34 TRT" name="addProductToCartWithLogin" description="Adding product to cart by logging in first.then verifying the product by going to the cart." finished-at="2022-11-02T12:10:09 TRT" duration-ms="34665" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Cookies accepted.]]>
+            </line>
+            <line>
+              <![CDATA[Go to the login page.]]>
+            </line>
+            <line>
+              <![CDATA[Login information has been entered.]]>
+            </line>
+            <line>
+              <![CDATA[Login successful.]]>
+            </line>
+            <line>
+              <![CDATA[The product has been searched.]]>
+            </line>
+            <line>
+              <![CDATA[The first product is selected.]]>
+            </line>
+            <line>
+              <![CDATA[Window tab has been changed.]]>
+            </line>
+            <line>
+              <![CDATA[Products have been added to the cart.]]>
+            </line>
+            <line>
+              <![CDATA[Go to cart.]]>
+            </line>
+            <line>
+              <![CDATA[The product names match.]]>
+            </line>
+            <line>
+              <![CDATA[The cart has been cleaned.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- addProductToCartWithLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:hepsiburada.cart.CartPageTest@71248c21]" started-at="2022-11-02T12:10:09 TRT" name="tearDown" finished-at="2022-11-02T12:10:09 TRT" duration-ms="296" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[The browser was successfully closed.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:hepsiburada.cart.CartPageTest@71248c21]" started-at="2022-11-02T12:10:09 TRT" name="setUp" finished-at="2022-11-02T12:10:17 TRT" duration-ms="7867" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[The browser opened successfully.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="addProductToCartWithoutLogin()[pri:2, instance:hepsiburada.cart.CartPageTest@71248c21]" started-at="2022-11-02T12:10:17 TRT" name="addProductToCartWithoutLogin" description="Adding a product to the cart without logging in, then verifying the product by going to the cart." finished-at="2022-11-02T12:10:35 TRT" duration-ms="18034" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Cookies accepted.]]>
+            </line>
+            <line>
+              <![CDATA[The product has been searched.]]>
+            </line>
+            <line>
+              <![CDATA[The first product is selected.]]>
+            </line>
+            <line>
+              <![CDATA[Window tab has been changed.]]>
+            </line>
+            <line>
+              <![CDATA[Products have been added to the cart.]]>
+            </line>
+            <line>
+              <![CDATA[Go to cart.]]>
+            </line>
+            <line>
+              <![CDATA[The product names match.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- addProductToCartWithoutLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:hepsiburada.cart.CartPageTest@71248c21]" started-at="2022-11-02T12:10:35 TRT" name="tearDown" finished-at="2022-11-02T12:10:35 TRT" duration-ms="206" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[The browser was successfully closed.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- hepsiburada.cart.CartPageTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>
