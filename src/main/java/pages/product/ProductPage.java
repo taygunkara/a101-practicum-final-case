@@ -22,7 +22,6 @@ public class ProductPage extends BasePage {
     public void changeWindowTab() {
         String currentWindow = driver.getWindowHandle();
         for (String window : driver.getWindowHandles()) {
-            // System.out.println(currentWindow);
             if (!window.equals(currentWindow)) {
                 driver.switchTo().window(window);
             }
